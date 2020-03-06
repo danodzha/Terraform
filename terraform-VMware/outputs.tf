@@ -1,3 +1,4 @@
+# Outputs from deployments
 output "VM_name" {
   value = "${vsphere_virtual_machine.vm.*.name}"
 }

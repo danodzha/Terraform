@@ -1,4 +1,4 @@
-ource "docker_image" "ghost_image" {
+resource "docker_image" "ghost_image" {
   name = "ghost:alpine"
 }
 

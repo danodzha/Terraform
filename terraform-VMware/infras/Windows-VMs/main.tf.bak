@@ -1,7 +1,0 @@
-provider "vsphere" {
-  user           = "Administrator@vsphere.local"
-  password       = "Num4-1392I3"
-  vsphere_server = "vcenter.learn-it.xyz"
-
-  allow_unverified_ssl = true
-}

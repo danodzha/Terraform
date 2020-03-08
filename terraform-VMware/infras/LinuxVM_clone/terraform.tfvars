@@ -21,6 +21,6 @@ netmask = "8"
 
 # Give you gateway address 
 gateway          = "69.65.43.142"
-#vcenter_user     = "Administrator@vsphere.local"
-#vcenter_password = "Num4-1392I3"
+#vcenter_user     = "USER"
+#vcenter_password = "PASSWORD"
 vcenter_name     = "vcenter.learn-it.xyz"

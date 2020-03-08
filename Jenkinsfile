@@ -24,7 +24,7 @@ node {
             }
         }
     }
-    if(action == 'Terraform Destroy') {
+    if(action == 'Destroy') {
         stage('plan_destroy') {
             dir ('terraform-VMware/infras/LinuxVM_clone/') {
             sh label: 'terraform plan destroy', script: "set +x; terraform plan -destroy -out=tfdestroyplan -input=false -var vcenter_user=${vc_user} -var vcenter_password=${vc_pwd} -var vm_count=${Number_of_VMs}"

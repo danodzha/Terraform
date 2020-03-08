@@ -1,8 +1,9 @@
 resource "vsphere_virtual_machine" "vm" {
-  count            = "${var.vm_count}"
-  name             = "${var.vm_name}${count.index}"
-  resource_pool_id = "${data.vsphere_resource_pool.pool.id}"
-  datastore_id     = "${data.vsphere_datastore.datastore.id}"
+  count            		= "${var.vm_count}"
+  name             		= "${var.vm_name}${count.index}"
+  resource_pool_id 		= "${data.vsphere_resource_pool.pool.id}"
+  datastore_id     		= "${data.vsphere_datastore.datastore.id}"
+  wait_for_guest_net_timeout 	= "10"
 
   num_cpus = "${var.cpu_count}"
   memory   = "${var.RAM_count_MB}"

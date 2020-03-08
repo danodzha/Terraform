@@ -41,6 +41,13 @@ node {
             }
         }
     }
+    if(action == 'Show') {
+        stage('Show state') {
+            dir ('terraform-VMware/infras/LinuxVM_clone/') {
+            sh label: 'terraform show state', script: "terraform output"
+            }
+        }     
+    }
     stage('Cleanup') {
         sh """
         pwd

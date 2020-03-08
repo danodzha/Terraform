@@ -48,11 +48,4 @@ node {
             }
         }     
     }
-    stage('Cleanup') {
-        sh """
-        pwd
-        ls
-        whoami
-        """
-    }
 }

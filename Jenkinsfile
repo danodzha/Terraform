@@ -30,7 +30,7 @@ node {
             sh label: 'terraform plan destroy', script: "set +x; terraform plan -destroy -out=tfdestroyplan -input=false -var vcenter_user=${vc_user} -var vcenter_password=${vc_pwd} -var vm_count=${Number_of_VMs}"
             }
         }
-        stage('destroy') {
+        stage('Destroy') {
             dir ('terraform-VMware/infras/LinuxVM_clone/') {
             script {
                 timeout(time: 10, unit: 'MINUTES') {

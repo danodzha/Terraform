@@ -2,9 +2,9 @@ node {
     git 'https://github.com/danodzha/Terraform.git/'
         stage ('Variable declaration') {
             sh """
-            export AWS_DEFAULT_REGION=${aws_default_region}
-            export AWS_ACCESS_KEY_ID=${aws_access_key}
-            export AWS_SECRET_ACCESS_KEY=${aws_secret_key}
+            AWS_DEFAULT_REGION=${aws_default_region}
+            AWS_ACCESS_KEY_ID=${aws_access_key}
+            AWS_SECRET_ACCESS_KEY=${aws_secret_key}
             echo $AWS_SECRET_ACCESS_KEY
             echo $AWS_ACCESS_KEY_ID
             echo $AWS_DEFAULT_REGION

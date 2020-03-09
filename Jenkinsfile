@@ -42,6 +42,13 @@ node {
         }
     }
     if(action == 'Show') {
+        stage('Terraform init') {
+            dir ('terraform-VMware/infras/LinuxVM_clone/') {
+                sh """
+                terraform init
+                """
+            }
+        }
         stage('Show state') {
             dir ('terraform-VMware/infras/LinuxVM_clone/') {
             sh label: 'terraform show state', script: "terraform output"

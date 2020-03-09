@@ -2,12 +2,7 @@ node {
     git 'https://github.com/danodzha/Terraform.git/'
         stage ('Variable declaration') {
             sh """
-            export  = AWS_DEFAULT_REGION=${aws_default_region}
-            export  = AWS_ACCESS_KEY_ID=${aws_access_key}
-            export  = AWS_SECRET_ACCESS_KEY=${aws_secret_key}
-            echo $AWS_SECRET_ACCESS_KEY
-            echo $AWS_ACCESS_KEY_ID
-            echo $AWS_DEFAULT_REGION
+            ls
             """
         }
         if(action == 'Deploy') {
@@ -67,12 +62,7 @@ node {
     }
     stage ('Variable cleanup') {
         sh """
-        unset ${aws_default_region}
-        unset ${aws_access_key}
-        unset ${aws_secret_key}
-        echo $AWS_SECRET_ACCESS_KEY
-        echo $AWS_ACCESS_KEY_ID
-        echo $AWS_DEFAULT_REGION
+        ls
         """
     }
 }
